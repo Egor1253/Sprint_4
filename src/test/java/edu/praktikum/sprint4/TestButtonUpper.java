@@ -14,7 +14,7 @@ import java.time.Duration;
 
 @RunWith(Parameterized.class)
 //класс с параметризованным автотестом: проверка первой кнопки
-public class TestButtonFirst {
+public class TestButtonUpper {
 
     // добавил WebDriver
     private WebDriver driver;
@@ -28,7 +28,7 @@ public class TestButtonFirst {
     private final String color;
     private final String comment;
 
-    public TestButtonFirst(String name, String surname, String address, String metroStation, String phoneNumber,
+    public TestButtonUpper(String name, String surname, String address, String metroStation, String phoneNumber,
                            String day, String period, String color, String comment) {
 
         this.name = name;

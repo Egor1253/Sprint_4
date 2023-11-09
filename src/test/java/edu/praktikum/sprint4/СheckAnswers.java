@@ -42,7 +42,7 @@ public class СheckAnswers {
     }
 
     @Before
-    public void setUp() {
+    public void setup() {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");

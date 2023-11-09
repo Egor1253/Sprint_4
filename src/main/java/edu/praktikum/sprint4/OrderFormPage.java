@@ -3,6 +3,8 @@ package edu.praktikum.sprint4;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import static java.awt.SystemColor.text;
+
 public class OrderFormPage {
 
     //добавил WebDriver
@@ -28,9 +30,9 @@ public class OrderFormPage {
         this.driver = driver;
     }
 
-    //
-    public void getForHwoScooterPage() {
-        driver.findElement(forHwoScooter).getText();
+    // метод перехода на форму заказа самоката (название: Для кого самокат)
+    public String getForHwoScooterPage() {
+        return driver.findElement(forHwoScooter).getText();
 
     }
 

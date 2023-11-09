@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 public class AboutRentPage {
 
     //добавил WebDriver
-    public WebDriver driver;
+    private final WebDriver driver;
     // выбор даты из списка
     private final By dateWhenBringScooter = By.xpath(".//input[contains(@placeholder, 'Когда привезти самокат')]");
     //поле: срок аренды

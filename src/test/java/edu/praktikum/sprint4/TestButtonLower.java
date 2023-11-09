@@ -8,8 +8,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
 
+import static java.awt.SystemColor.text;
+import static org.junit.Assert.assertEquals;
+
 // проверяю переход с нижней кнопки Заказать на форму: Для кого самокат
-public class TestButtonSecond {
+public class TestButtonLower {
     //добавил WebDriver
     public WebDriver driver;
 
@@ -32,8 +35,11 @@ public class TestButtonSecond {
         mainPage.scrollToQuestion();
         // кликнул по нижей кнопке: Заказать
         mainPage.clickOrderButtonSecond();
+        // проверил название формы: Для кого самокат
+        String ExpectedText = "Для кого самокат";
         // получил переход на форму заказа самоката
-        orderFormPage.getForHwoScooterPage();
+        String ActualPage = orderFormPage.getForHwoScooterPage();
+        assertEquals("Нет получен текст: Для кого самокат", ExpectedText, ActualPage);
     }
 
     //закрыл страницу Яндекс самоката
