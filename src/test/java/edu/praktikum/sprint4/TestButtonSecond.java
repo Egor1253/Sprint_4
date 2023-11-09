@@ -24,19 +24,16 @@ public class TestButtonSecond {
         // переход на страницу тестового приложения
         MainPage mainPage = new MainPage(driver);
         OrderFormPage orderFormPage = new OrderFormPage(driver);
-        AboutRentPage aboutRentPage = new AboutRentPage(driver);
         // открыл страницу Яндекс. Самокат
         driver.get(mainPage.getURL());
         // принимаем куки
         mainPage.clickAcceptCookie();
+        // прокручиваю страницу до нижней кнопки заказать
         mainPage.scrollToQuestion();
         // кликнул по нижей кнопке: Заказать
         mainPage.clickOrderButtonSecond();
-        // заполняем первую форму заказа
-        orderFormPage.fillFormSecond();
-        // заполняем вторую форму заказа
-        aboutRentPage.forYouInformationSecond();
-
+        // получил переход на форму заказа самоката
+        orderFormPage.getForHwoScooterPage();
     }
 
     //закрыл страницу Яндекс самоката

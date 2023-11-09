@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 public class MainPage {
 
     // добавил WebDriver
-    public static WebDriver driver;
+    public WebDriver driver;
     // указал ссылку на сайт: Яндекс Самокат
     private static final String URL = "https://qa-scooter.praktikum-services.ru/";
     // локатор до куки

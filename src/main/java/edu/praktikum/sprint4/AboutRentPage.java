@@ -30,8 +30,8 @@ public class AboutRentPage {
     }
 
     // метод: дата ожидания самоката
-    public void setDateScooterDelivery(String DateScooterDelivery) {
-        driver.findElement(dateWhenBringScooter).sendKeys(DateScooterDelivery);
+    public void setDateScooterDelivery(String dateScooterDelivery) {
+        driver.findElement(dateWhenBringScooter).sendKeys(dateScooterDelivery);
         driver.findElement(dateWhenBringScooter).sendKeys(Keys.ENTER);
     }
         // метод: срок аренды - кнопка выпадающего списока
@@ -44,8 +44,8 @@ public class AboutRentPage {
             driver.findElement(checkBoxColor).click();
         }
         // метод: комментарий для курьера
-        public void setInfoForCourier(String InfoForCourier){
-            driver.findElement(commentForTheCourier).sendKeys(InfoForCourier);
+        public void setInfoForCourier(String infoForCourier){
+            driver.findElement(commentForTheCourier).sendKeys(infoForCourier);
         }
         // нажал на кнопку: заказать под формой про аренду
         public void clickOrderButtonUnderForm(){
@@ -58,26 +58,16 @@ public class AboutRentPage {
     // метод popap: Заказ оформлен
     public String getPopapOrderPlaced() {
         String text = driver.findElement(popapOrderPlaced).getText();
-        System.out.println(text);
         return text;
     }
-        public void forYouInformationFirst(String DateScooterDelivery, String InfoForCourier){
+        public void forYouInformationFirst(String dateScooterDelivery, String infoForCourier){
 
-            setDateScooterDelivery(DateScooterDelivery);
+            setDateScooterDelivery(dateScooterDelivery);
             setDropDownPeriod();
             setCheckBoxColor();
-            setInfoForCourier(InfoForCourier);
+            setInfoForCourier(infoForCourier);
             clickOrderButtonUnderForm();
             clickButtonYes();
         }
 
-    public void forYouInformationSecond(){
-
-        setDateScooterDelivery("29.11.2023");
-        setDropDownPeriod();
-        setCheckBoxColor();
-        setInfoForCourier("Welcome");
-        clickOrderButtonUnderForm();
-        clickButtonYes();
-    }
 }
