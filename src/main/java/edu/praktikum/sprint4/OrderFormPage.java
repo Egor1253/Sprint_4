@@ -3,12 +3,10 @@ package edu.praktikum.sprint4;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import static java.awt.SystemColor.text;
-
 public class OrderFormPage {
 
     //добавил WebDriver
-    public WebDriver driver;
+    private final WebDriver driver;
     // Форма заполнения страницы: для кого самокат
     private final By forHwoScooter = By.xpath(".//div[@class='Order_Header__BZXOb' and text()='Для кого самокат']");
     // поле: Имя
@@ -33,7 +31,6 @@ public class OrderFormPage {
     // метод перехода на форму заказа самоката (название: Для кого самокат)
     public String getForHwoScooterPage() {
         return driver.findElement(forHwoScooter).getText();
-
     }
 
     // метод заполнения поля имя

@@ -12,10 +12,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
-
 @RunWith(Parameterized.class)
-
-
 //класс с автотестом: Разговоры о важном.
 public class СheckAnswers {
     private WebDriver driver;
